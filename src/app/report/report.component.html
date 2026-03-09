@@ -1,0 +1,125 @@
+<div class="twelve columns">
+  <div style="margin-top: 10px; background-color: #fff6eb; padding: 10px">
+    <label
+      style="margin-left: 11px; font-size: 20px; float: right"
+      soho-label
+      for="socode"
+      >Facility:<span
+        style="
+          font-size: 20px;
+          margin-left: 20px;
+          float: right;
+          font-weight: bold;
+        "
+        >{{ this.iFACI }}</span
+      >
+    </label>
+
+    <label style="margin-left: 11px; font-size: 20px" soho-label for="socode"
+      >Manufacturing Order:<span
+        style="font-size: 20px; margin-left: 5px; font-weight: bold; color: red"
+        >{{ this.iMFNO }}</span
+      ><span style="margin-left: 25px">{{ this.iPRNO }}</span>
+    </label>
+
+    <label
+      style="margin-left: 221px; font-size: 20px; margin-top: 30px"
+      soho-label
+      for="socode"
+      >Ordered Qty:<span
+        ><input
+          readonly
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+            margin-left: 36px;
+            width: 100px;
+          "
+          autocomplete="doNotAutoComplete"
+          oninput="this.value = this.value.toUpperCase()"
+          [(ngModel)]="iORQA"
+          maxlength="20"
+          soho-field-options
+          name="product-lookup"
+          type="text"
+      /></span>
+    </label>
+
+    <label *ngIf="standardbom" style="margin-left: 215px; font-size: 20px" soho-label for="socode"
+      >Received Qty:<span
+        ><input
+          readonly
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+            margin-left: 36px;
+            width: 100px;
+          "
+          autocomplete="doNotAutoComplete"
+          oninput="this.value = this.value.toUpperCase()"
+          [(ngModel)]="iRVQA"
+          soho-field-options
+          maxlength="20"
+          name="product-lookup"
+          type="text"
+      /></span>
+    </label>
+
+    <label *ngIf="reversebom"
+      style="margin-left: 195px; margin-top: 40px; font-size: 20px"
+      soho-label
+      for="socode"
+      >Remaining Qty:<span
+        ><input
+          readonly
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+            margin-left: 41px;
+            background-color: yellow;
+            width: 100px;
+          "
+          autocomplete="doNotAutoComplete"
+          oninput="this.value = this.value.toUpperCase()"
+          [(ngModel)]="nRNQA"
+          soho-field-options
+          maxlength="20"
+          name="product-lookup"
+          type="text"
+      /></span>
+    </label>
+
+
+    <label
+      style="margin-left: 148px; margin-top: 40px; font-size: 20px"
+      soho-label
+      for="socode"
+      >new MO Ordered Qty:<span
+        ><input
+          readonly
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+            margin-left: 36px;
+            background-color: yellow;
+            width: 100px;
+          "
+          autocomplete="doNotAutoComplete"
+          oninput="this.value = this.value.toUpperCase()"
+          [(ngModel)]="nORQA"
+          soho-field-options
+          maxlength="20"
+          name="product-lookup"
+          type="text"
+      /></span>
+    </label>
+
+
+
+
+  </div>
+</div>
